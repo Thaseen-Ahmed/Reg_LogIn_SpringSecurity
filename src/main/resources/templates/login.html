@@ -13,7 +13,12 @@
 				<div class="col-md-6 offset-md-3">
 					<div class="card">
 						<div class="card-header text-center fs-4">Login Page</div>
-
+							<th:block th:if="${param.error}">
+								<p class="text-center text-danger fs-5">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+							</th:block>
+							<th:block th:if="${param.logout}">
+								<p class="text-center text-success fs-5">Logout Successfully</p>
+							</th:block>
 						<div class="card-body">
 							<form action="userLogin" method="post">
 								
