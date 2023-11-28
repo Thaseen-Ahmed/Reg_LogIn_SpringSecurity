@@ -3,14 +3,12 @@
 	th:replace="base::layout(~{::section})">
 <head>
 <meta charset="ISO-8859-1">
-<title>User Profile</title>
-
+<title>Admin Profile</title>
 </head>
 <body>
 
-
-		<section class="text-center"> 
-		<h2>User Profile Page</h2>
+			<section class="text-center"> 
+		<h2>Admin Profile Page</h2>
 		
 		<h3>Name: [[${user.name}]]</h3>
 		<h3>Email: [[${user.email}]]</h3>
@@ -18,9 +16,15 @@
 		<h3>Role: [[${user.role}]]</h3>
 	
 		<a href="/logout">Logout</a>
+		
+		<button>
+			<a href="User-Details">UserDetails</a>
+		</button>
+		
 		</section>
-
-
+		
+		
+		
 
 </body>
-</html> 
+</html>

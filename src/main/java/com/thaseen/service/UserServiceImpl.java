@@ -1,5 +1,7 @@
 package com.thaseen.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -36,5 +38,13 @@ public class UserServiceImpl implements UserService{
 		HttpSession session = ((ServletRequestAttributes) (RequestContextHolder.getRequestAttributes())).getRequest().getSession();
 		session.removeAttribute("msg");
 	}
+
+	@Override
+	public List<User> viewAll() {
+		return userRepo.findAll();
+		 
+	}
+
+
 
 }

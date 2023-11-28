@@ -50,20 +50,19 @@ public class HomeController {
 		return "login";
 	}
 	
-	@GetMapping("/user/profile")
-	public String profile(Principal p,Model m) {
-		String email = p.getName();
-		User user = urepo.findByEmail(email);
-		m.addAttribute("user",user);
-		
-		
-		return "profile";
-	}
-	
-	@GetMapping("/home")
-	public String home() {
-		return "home";
-	}
+//	@GetMapping("/user/profile")
+//	public String profile(Principal p,Model m) {
+//		String email = p.getName();
+//		User user = urepo.findByEmail(email);
+//		m.addAttribute("user",user);
+//	
+//		return "profile";
+//	}
+//	
+//	@GetMapping("/user/home")
+//	public String home() {
+//		return "home";
+//	}
 	
 	//getting the values and saving it 
 	@PostMapping("/createUser")
